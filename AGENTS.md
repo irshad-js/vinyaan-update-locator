@@ -28,6 +28,9 @@ This repository owns GitHub Pages publication only. `vinyaanblocks` owns contrac
 - Never commit private keys, credentials, or unsigned generated locator/catalog
   data.
 - Never hand-edit files under `ide/extensions` or `mirror-inventory.json`.
+- Do not bulk-read archive, vendored, SDK or generated trees (`_archives/`,
+  `_m41/`, `vendor/`, `node_modules/`, `build/`, `dist/`, `.artifacts/`,
+  `Reference-files-*`, `esp-idf-*`, `*.previous-*`) unless the task names a file.
 
 ## Commands
 
