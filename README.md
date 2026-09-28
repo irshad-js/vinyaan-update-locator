@@ -6,6 +6,7 @@ Public, read-only fallback for Vinyaan IDE staging extension discovery.
 
 - `ide/extensions/staging/locator-v1.json`: separately signed mirror locator.
 - `ide/extensions/staging/catalog-v2.json`: signed extension catalog.
+- `ide/extensions/staging/publish-manifest.json`: signed publication manifest.
 - `ide/extensions/artifacts/`: content-addressed extension packages.
 - `mirror-inventory.json`: deterministic byte and SHA-256 inventory.
 
