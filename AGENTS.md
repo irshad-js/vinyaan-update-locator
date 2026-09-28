@@ -31,9 +31,14 @@ This repository owns GitHub Pages publication only. `vinyaanblocks` owns contrac
 
 ## Commands
 
+### Bootstrap
+
 The complete operator runbook is `../vinyaan-workspace/docs/extensions.md`.
-After building `../vinyaanblocks` (`npm run build`), refresh this mirror from
-the LMS staging tree:
+Build `../vinyaanblocks` with `npm run build` before refreshing the mirror.
+
+### Verify
+
+Refresh the mirror from the LMS staging tree:
 
 ```powershell
 node ..\vinyaanblocks\tools\sync-extension-mirror.mjs `
