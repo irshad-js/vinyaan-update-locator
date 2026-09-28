@@ -14,14 +14,35 @@ This repository owns GitHub Pages publication only. `vinyaanblocks` owns contrac
 
 ## Invariants
 
-- Never commit private keys, credentials, or unsigned generated locator/catalog data.
+- The published tree is the complete locator, catalog, manifest, and referenced
+  artifact set; GitHub Actions deploys committed bytes without signing or
+  transformation.
+
+## Boundaries
+
+✅ Always:
+- Preserve exact bytes; the mirror stays byte-for-byte with the signed staging
+  tree.
+
+🚫 Never:
+- Never commit private keys, credentials, or unsigned generated locator/catalog
+  data.
 - Never hand-edit files under `ide/extensions` or `mirror-inventory.json`.
-- Mirror the complete locator, catalog, manifest, and referenced artifact set.
-- Preserve exact bytes; GitHub Actions deploys without signing or transformation.
 
 ## Commands
 
-Run the shared mirror tool from `vinyaanblocks`; verify hashes before commit.
+The complete operator runbook is `../vinyaan-workspace/docs/extensions.md`.
+After building `../vinyaanblocks` (`npm run build`), refresh this mirror from
+the LMS staging tree:
+
+```powershell
+node ..\vinyaanblocks\tools\sync-extension-mirror.mjs `
+  --source-root ..\bits32_lms\public\ide\extensions `
+  --destination-root .
+```
+
+The tool verifies byte parity against the publish manifest and writes
+`mirror-inventory.json`; commit the complete generated tree as one batch.
 
 ## Test matrix
 
@@ -37,4 +58,4 @@ Use `main`. Commit generated publication updates as one coherent batch. Push onl
 
 ## Open questions
 
-Track cross-repository decisions in `vinyaan-workspace/docs/open-questions.md`.
+Track cross-repository decisions in `vinyaan-workspace/docs/register.md`.
