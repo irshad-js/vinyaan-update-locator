@@ -58,6 +58,10 @@ Require shared publisher tests, byte-for-byte mirror parity, HTTPS availability,
 
 ## Documentation duties
 
+Licensing: the repository is public for Vinyaan software only; `LICENSE`
+grants no rights (workspace register LIC-OQ-1). Keep `NOTICE`, `SECURITY.md`
+and `.github/CODEOWNERS` current.
+
 Keep this guide stable. Put milestone status and evidence in `vinyaan-workspace`.
 
 ## Git rules
